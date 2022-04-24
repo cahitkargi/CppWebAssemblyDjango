@@ -1,0 +1,29 @@
+<!doctype html>
+{% load static %}
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>C++ WebAssembly in Django</title>
+  </head>
+  <body>
+    <canvas height="1050" width="1050"></canvas>
+    <script>
+      var Module = {
+        preRun: [function(){
+          const update = cwrap('update', null, []);
+          requestAnimationFrame(function f() {
+            update();
+            requestAnimationFrame(f);
+          })
+        }]
+      }
+      Module.onRuntimeInitialized = _ => {
+        const fib = Module.cwrap('fib', 'number', ['number']);
+        console.log(fib(12));
+      }
+    </script>
+    <script async src="{% static 'cpp/index.js' %}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,5 @@
+__pycache__/
+.vscode/
+simplifiedGlue.js
+DjangoWebAssembly/templates/cpp/indexOld.html
+.env
