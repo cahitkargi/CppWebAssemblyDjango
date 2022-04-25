@@ -7,7 +7,7 @@
 EM_JS(void, drawCircle, (float x, float y, float r), {
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
-    context.fillStyle = '#ff0000';
+    context.fillStyle = '#28d6fc';
     context.beginPath();
     context.arc(x, y, r, 0, 2 * Math.PI);
     context.fill();
@@ -43,6 +43,5 @@ int fib(int n) {
 
 
 int main(){
-    //drawCircle(500.0, 500.0, 50.0);
     return 0;
 }

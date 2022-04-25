@@ -1717,7 +1717,7 @@ var ASM_CONSTS = {
   
 };
 function clearCanvas(){ const canvas = document.querySelector('canvas'); const context = canvas.getContext('2d'); context.clearRect(0, 0, canvas.width, canvas.height) }
-function drawCircle(x,y,r){ const canvas = document.querySelector('canvas'); const context = canvas.getContext('2d'); context.fillStyle = '#ff0000'; context.beginPath(); context.arc(x, y, r, 0, 2 * Math.PI); context.fill(); }
+function drawCircle(x,y,r){ const canvas = document.querySelector('canvas'); const context = canvas.getContext('2d'); context.fillStyle = '#28d6fc'; context.beginPath(); context.arc(x, y, r, 0, 2 * Math.PI); context.fill(); }
 
 
 
